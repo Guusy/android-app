@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">GonzaApp</string>
+    <string name="app_name">Gonza app</string>
+    <string name="title_activity_create_account">CreateAccountActivity</string>
+    <string name="title_activity_referencia">ReferenciaActivity</string>
+    <string name="hint_username">Nombre de usuario</string>
+    <string name="hint_password">Contraseña</string>
 </resources>
