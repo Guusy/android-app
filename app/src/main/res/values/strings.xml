@@ -6,4 +6,18 @@
     <string name="hint_password">Contraseña</string>
     <string name="login">Login</string>
     <string name="text_button_login">Login</string>
+    <string name="dont_have_account">¿No tienes cuenta ? , </string>
+    <string name="create_here"> crea una aqui</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_user">User</string>
+    <string name="hint_confirmPassword">Confirmar Contraseña</string>
+    <string name="join_us">Unete</string>
+    <string name="toolbar_title_createaccount">
+       Crear cuenta
+    </string>
+    <string name="username_card">Gonzalo Gras Cantou</string>
+    <string name="firstWord_card">Hace</string>
+    <string name="timecard_card">4 dias</string>
+    <string name="likenumbercard_card">10 Me Gusta</string>
 </resources>
