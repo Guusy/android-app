@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -73,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/text_button_login"
                     android:theme="@style/RaisedButtonDark"
-                    android:onClick="goCreateAccount"
+                    android:onClick="login"
                     />
                 <RelativeLayout
                     android:layout_width="match_parent"
