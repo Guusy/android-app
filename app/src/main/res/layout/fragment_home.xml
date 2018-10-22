@@ -17,8 +17,6 @@
         android:paddingRight="16dp"
         android:paddingBottom="16dp"
         >
-        <include layout="@layout/cardview_picture"></include>
-        <include layout="@layout/cardview_picture"></include>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/pictureRecycler"

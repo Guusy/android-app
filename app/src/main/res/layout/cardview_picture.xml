@@ -4,7 +4,9 @@
     android:id="@+id/card"
     android:layout_width="match_parent"
     android:layout_height="@dimen/height_cardview"
-    cardview:cardCornerRadius="@dimen/cornerradius_cardview">
+    cardview:cardCornerRadius="@dimen/cornerradius_cardview"
+    android:layout_marginBottom="10dp"
+    >
     
     <FrameLayout
         android:layout_width="match_parent"
