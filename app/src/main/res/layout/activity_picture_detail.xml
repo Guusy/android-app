@@ -16,7 +16,7 @@
             android:id="@+id/collapsingToolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="@color/colorPrimary">
 
             <ImageView
@@ -65,7 +65,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingLeft="@dimen/padding_horizontal_login"
-                android:paddingRight="@dimen/padding_horizontal_login">
+                android:paddingRight="@dimen/padding_horizontal_login"
+                android:paddingBottom="5dp">
 
                 <TextView
                     android:id="@+id/likeNumberDetail"
