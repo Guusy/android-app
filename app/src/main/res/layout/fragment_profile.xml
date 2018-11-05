@@ -27,14 +27,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="200dp"
-                android:paddingBottom="20dp"
                 android:layout_gravity="center|top"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:gravity="center"
-                >
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingTop="200dp">
 
                 <TextView
                     android:id="@+id/usernameProfile"
@@ -71,12 +70,12 @@
         android:layout_marginTop="@dimen/margintop_circleimageprofile"
         android:elevation="@dimen/elevation_circleimageprofile"
         android:src="@drawable/simpsons"
-        app:dependsOn="@+id/appBarProfile"
         app:dependTargetY="@dimen/limitY_circleimage"
         app:dependType="y"
+        app:dependsOn="@+id/appBarProfile"
         app:layout_behavior="com.zoonref.SimpleViewBehavior"
-        app:targetWidth="@dimen/width_circleimagetoolbar"
         app:targetHeight="@dimen/width_circleimagetoolbar"
+        app:targetWidth="@dimen/width_circleimagetoolbar"
         app:targetX="@dimen/activity_vertical_margin"
         app:targetY="@dimen/margintoptoolbar_circleimageprofile" />
 
@@ -92,13 +91,12 @@
         android:text="@string/username_card"
         android:textColor="@android:color/white"
         android:textSize="@dimen/textsize_usernametoolbarprofile"
-        app:dependsOn="@+id/appBarProfile"
         app:dependTargetY="@dimen/limitY_usernametoolbarprofile"
         app:dependType="y"
-
-        app:targetY="@dimen/margintoptoolbar_circleimageprofile"
+        app:dependsOn="@+id/appBarProfile"
         app:layout_behavior="com.zoonref.SimpleViewBehavior"
         app:targetAlpha="1"
+        app:targetY="@dimen/margintoptoolbar_circleimageprofile"
 
 
         />

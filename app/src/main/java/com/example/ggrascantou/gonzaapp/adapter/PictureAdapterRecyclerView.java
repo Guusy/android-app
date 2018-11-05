@@ -2,8 +2,11 @@ package com.example.ggrascantou.gonzaapp.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Explode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +24,7 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
     private ArrayList<Picture> pictures;
     private int resource;
     private Activity activity;
+
     public PictureAdapterRecyclerView(ArrayList<Picture> pictures, int resource, Activity activity) {
         this.pictures = pictures;
         this.resource = resource;
@@ -28,11 +32,10 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
     }
 
 
-
     @NonNull
     @Override
     public PictureViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(resource,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(resource, parent, false);
         return new PictureViewHolder(view);
     }
 
@@ -48,7 +51,15 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(activity, PictureDetailActivity.class);
-                activity.startActivity(intent);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    Explode explode = new Explode();
+                    explode.setDuration(1000);
+                    activity.getWindow().setExitTransition(explode);
+                    activity.startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(activity, view, activity.getString(R.string.transitioname_picture)).toBundle());
+                } else {
+
+                    activity.startActivity(intent);
+                }
             }
         });
 

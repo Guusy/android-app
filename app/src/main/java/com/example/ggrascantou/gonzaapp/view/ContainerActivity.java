@@ -29,6 +29,7 @@ public class ContainerActivity extends AppCompatActivity {
         fragments.put((Integer) R.id.profile,new ProfileFragment());
         fragments.put((Integer) R.id.search,new SearchFragment());
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragments.get(R.id.home)).commit();
         BottomNavigationView bottomBar =  (BottomNavigationView)  findViewById(R.id.bottombar);
         bottomBar.setSelectedItemId(R.id.home);
         bottomBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
