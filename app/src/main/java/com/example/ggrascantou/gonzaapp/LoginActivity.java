@@ -1,6 +1,7 @@
 package com.example.ggrascantou.gonzaapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,13 @@ public class LoginActivity extends AppCompatActivity {
 
     public void login(View view) {
         Intent intent = new Intent(this, ContainerActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToPlatziWeb(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
+                "https://platzi.com/"
+        ));
         startActivity(intent);
     }
 }
